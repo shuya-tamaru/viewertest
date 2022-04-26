@@ -142,8 +142,9 @@
 <script type="text/javascript" src="main.js"></script>
 <script>
     const iframe = document.getElementById("viewer");
+    console.log(iframe);
     iframe.contentWindow.postMessage({
         message: "hello",
-    }, "https://shuya-tamaru.github.io/viewertest/");
+    }, "*");
 </script>
 </html>
