@@ -141,20 +141,22 @@
 </body>
 <script type="text/javascript" src="main.js"></script>
 <script>
-    // const iframe = document.getElementById("viewer");
-    // console.log(iframe);
-    // iframe.contentWindow.postMessage({
-    //     message: "hello",
-    // }, "*");
-    window.addEventListener('message', function(event) {
-    // 実際には適切な origin 判定が必要
-    // ローカルファイルを Chrome でそのまま開くと origin = 'null' になっている
-    console.log(event.data);
-    if (event.origin !== 'https://playcanv.as') {
+    window.onload = function(){
+        const iframe = document.getElementById("viewer");
+        iframe.contentWindow.postMessage({
+            message: "hello",
+        }, "https://playcanv.as");
+    };
 
-        return;
-    }
-        alert(event.data);
-    });
+    // window.addEventListener('message', function(event) {
+    // // 実際には適切な origin 判定が必要
+    // // ローカルファイルを Chrome でそのまま開くと origin = 'null' になっている
+    // console.log(event.data);
+    // if (event.origin !== 'https://playcanv.as') {
+
+    //     return;
+    // }
+    //     alert(event.data);
+    // });
 </script>
 </html>
