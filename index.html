@@ -146,6 +146,7 @@
     // iframe.contentWindow.postMessage({
     //     message: "hello",
     // }, "*");
+    console.log(event.origin);
     window.addEventListener('message', event => {
     // 実際には適切な origin 判定が必要
     // ローカルファイルを Chrome でそのまま開くと origin = 'null' になっている
