@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css" integrity="sha384-3B6NwesSXE7YJlcLI9RpRqGf2p/EgVH8BgoKTaUrmKNDkHPStTQ3EyoYjCGXaOTS" crossorigin="anonymous">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <title>3DModelViewer</title>
+</head>
+<body>
+    <div class='container'>
+        <div class='dataTableBox'>
+            <div class='dataTableArea' id="dataTableArea" style="display: none;">
+                <img src="image.png" alt="redashImage" title="">
+            </div>
+            <div class='dataTableHide' id="dataTableHide">
+                <i class="fa-solid fa-caret-right" id="dataIcon"></i>
+            </div>
+        </div>
+        <div class ='commentBox'>
+            <div class='commentArea' id="commentArea" style="display: none;">
+                <div class="commentArea_header">
+                    header
+                </div>
+                <div class="commentArea_main">
+                    <div class="commentArea_main_comment">
+                        <div class="commentArea_main_comment_conatiner">
+                            <img src="user.png" alt="" width="32" height="32">
+                            <div class="user_date_conatiner">
+                                <div class="comment_user">
+                                    userName
+                                </div>
+                                <div  class="comment_date">
+                                    2022/04/04
+                                </div>
+                            </div>
+                        </div>
+                        <div class="commentArea_main_comment_contents">
+                            コメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメント
+                        </div>
+                    </div>
+                    <div class="commentArea_main_comment">
+                        <div class="commentArea_main_comment_conatiner">
+                            <img src="user.png" alt="" width="32" height="32">
+                            <div class="user_date_conatiner">
+                                <div class="comment_user">
+                                    userName
+                                </div>
+                                <div  class="comment_date">
+                                    2022/04/04
+                                </div>
+                            </div>
+                        </div>
+                        <div class="commentArea_main_comment_contents">
+                            コメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメント
+                        </div>
+                    </div>
+                    <div class="commentArea_main_comment">
+                        <div class="commentArea_main_comment_conatiner">
+                            <img src="user.png" alt="" width="32" height="32">
+                            <div class="user_date_conatiner">
+                                <div class="comment_user">
+                                    userName
+                                </div>
+                                <div  class="comment_date">
+                                    2022/04/04
+                                </div>
+                            </div>
+                        </div>
+                        <div class="commentArea_main_comment_contents">
+                            コメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメント
+                        </div>
+                    </div>
+                    <div class="commentArea_main_comment">
+                        <div class="commentArea_main_comment_conatiner">
+                            <img src="user.png" alt="" width="32" height="32">
+                            <div class="user_date_conatiner">
+                                <div class="comment_user">
+                                    userName
+                                </div>
+                                <div  class="comment_date">
+                                    2022/04/04
+                                </div>
+                            </div>
+                        </div>
+                        <div class="commentArea_main_comment_contents">
+                            コメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメント
+                        </div>
+                    </div>
+                </div>
+                <div class="commentArea_input">
+                    <textarea name="" class="input_area" id="" cols="30" rows="10"></textarea>
+                    <div class="send_area">
+                        <button class="cancelButton">Cancel</button>
+                        <button class="sendButton">Add</button>
+                    </div>
+                </div>
+            </div>
+            <div class='commentHide' id="commentHide">
+                <i class="fa-solid fa-caret-right" id="commentIcon"></i>
+            </div>
+        </div>
+        <div class ='mainBox'>
+            <div class="detailArea">
+                <div class="detailArea_header">
+                    <ul class="detailArea_header_list">
+                        <li class="detailArea_header_list_li"><a href="#">BackToBuildingList</a></li>
+                        <!-- <li><a href="#">物件一覧に戻る</a></li> -->
+                    </ul>
+                </div>
+                <div class="detailArea_main">
+                    <ul class="detailArea_main_list">
+                        <li><a href="#">BuildingName</a></li>
+                        <li class="detailArea_main_list_icon">
+                            <img src="user.png" alt="" width="32" height="32">
+                        </li>
+                        <li>
+                            <a href="#">UserName</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="detailArea_button">
+                    <!-- <ul class="detailArea_button_list">
+                        <li><a href="#">ボタン</a></li>
+                        <li></li>
+                    </ul> -->
+                </div>
+            </div>
+            <div class="mainArea">
+                <iframe id="viewer"
+                    title="viewer"
+                    width="90%"
+                    height="90%"
+                    src="https://playcanv.as/p/U3ODneX4/">
+                </iframe>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="main.js"></script>
+<script>
+    const iframe = document.getElementById("viewer");
+    iframe.contentWindow.postMessage({
+        message: "hello",
+    }, "*");
+</script>
+</html>

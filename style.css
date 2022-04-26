@@ -1,0 +1,267 @@
+:root{
+    --commentAreaWidth:0px;
+    --commentHideWidth:12px;
+    --dataTableAreaWidth:0px;
+    --dataTableHideWidth:12px;
+}
+
+div{
+    transition: width .0s;
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+}
+
+
+/* dataArea_css */
+.dataTableBox{
+    height: 100%;
+    width: calc(var(--dataTableAreaWidth) + var(--dataTableHideWidth));
+    display: flex;
+}
+
+.dataTableArea{
+    height: 100%;
+    width: var(--dataTableAreaWidth);
+    text-align: center;
+    padding: 20px;
+}
+
+.dataTableHide{
+    height: 100%;
+    width: var(--dataTableHideWidth);
+    position: relative;
+}
+
+#dataIcon {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: 50%;
+    margin: auto;
+}
+
+.dataTableHide,.commentHide{
+    background-color: #dcdcdc;
+    border-right:1px solid #c0c0c0;
+}
+
+.dataTableHide:hover,.commentHide:hover{
+    background-color: #c0c0c0;
+}
+
+
+/* commentArea_css */
+.commentBox{
+    height: 100%;
+    width: calc(var(--commentAreaWidth) + var(--commentHideWidth));
+    display: flex;
+}
+
+.commentArea{
+    height: 100%;
+    width: var(--commentAreaWidth);
+    background-color: white;
+    /* padding: 10px; */
+}
+
+.commentArea_header,.commentArea_main,.commentArea_input{
+    width: calc(100% - 20px);
+    /* width: 100%; */
+    margin: 0 10px;
+    text-align: center;
+    border-bottom: 1px solid #c0c0c0;
+}
+
+.commentArea_header{
+    height: 5%;
+}
+
+.commentArea_main{
+    height: calc(75% - 10px);
+    overflow-y: scroll;
+    padding-top: 10px;
+}
+
+.commentArea_main::-webkit-scrollbar {
+    display:none;
+}
+
+.commentArea_main_comment_conatiner{
+    display: flex;
+}
+
+.user_date_conatiner{
+    margin-left: 10px;
+}
+
+/* .comment_user{
+
+} */
+
+.comment_date{
+    font-size: 10px;
+}
+
+.commentArea_main_comment_contents{
+    padding: 10px;
+}
+
+.commentArea_input{
+    height: 20%;
+}
+
+.input_area{
+    width: calc(100% - 10px);
+    height: 80%;
+    border-radius: 2px;
+    margin-top: 5px;
+    border-color: #c0c0c0;
+}
+
+.send_area{
+    width: calc(100% - 10px);
+    height: 10%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.cancelButton,.sendButton{
+    width: 60px;
+    height: 100%;
+    display: inline-block;
+    margin-left: 5px;
+    font-size: 8px;
+}
+
+.commentHide{
+    height: 100%;
+    width: var(--commentHideWidth);
+    position: relative;
+}
+
+#commentIcon {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: 50%;
+    margin: auto;
+}
+
+
+/* mainArea_css */
+.mainBox{
+    height: 100%;
+    width: calc(100%
+                - var(--dataTableAreaWidth)
+                - var(--dataTableHideWidth)
+                - var(--commentAreaWidth)
+                - var(--commentHideWidth)
+                );
+    overflow-y: scroll;
+}
+
+.mainArea{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+#viewer{
+    position: absolute;
+    top:  0;
+    bottom:  0;
+    left:  0;
+    right:  0;
+    margin:  auto;
+}
+
+.detailArea{
+    width: 100%;
+    height: 20%;
+    border-bottom: 2px solid #dcdcdc;
+}
+
+.detailArea_header,.detailArea_main,.detailArea_button{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.detailArea_header{
+    height: 20%;
+    vertical-align: middle;
+}
+
+.detailArea_header_list,.detailArea_button_list{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 10px;
+    vertical-align: middle;
+}
+
+.detailArea_main_list{
+    display: flex;
+    justify-content: flex-start;
+    padding: 5px 10px;
+    vertical-align: middle;
+}
+
+.detailArea_main_list_icon{
+    margin-left: auto;
+}
+
+.detailArea_header_list_li{
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.detailArea_main{
+    height: 60%;
+}
+
+.detailArea_main_list{
+    padding-top: 20px;
+}
+
+.detailArea_main_list li{
+    font-size: 25px;
+    font-weight: bold;
+}
+
+
+.detailArea_button{
+    height: 20%;
+}
+
+
+li{
+    display: -webkit-box; /* safari, Chrome */
+    display: -moz-box;    /* Firefox */
+    display: -o-box;      /* Opera */
+    display: -ms-box;     /* IE */
+    display: box;         /* ベンダープレフィックスなし */
+}
+
+li {
+    -webkit-box-align: center; /* safari, Chrome */
+    -moz-box-align: center;    /* Firefox */
+    -o-box-align: center;      /* Opera */
+    -ms-box-align: center;     /* IE */
+    box-align: center;         /* ベンダープレフィックスなし */
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+}
+
+a:hover{
+    text-decoration: underline dotted red;
+    color: red;
+}
+
+
