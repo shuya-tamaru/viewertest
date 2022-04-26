@@ -141,12 +141,16 @@
 </body>
 <script type="text/javascript" src="main.js"></script>
 <script>
-
-        const iframe = document.getElementById("viewer");
+window.setTimeout(
+    function(){
+    const iframe = document.getElementById("viewer");
         console.log(iframe.contentWindow);
         iframe.contentWindow.postMessage({
             message: "hello",
         }, "https://playcanv.as");
+}, 15000)
+
+
 
     // window.addEventListener('message', function(event) {
     // // 実際には適切な origin 判定が必要
