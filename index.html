@@ -142,7 +142,9 @@
 <script type="text/javascript" src="main.js"></script>
 <script>
     window.onload = function(){
+
         const iframe = document.getElementById("viewer");
+        console.log(iframe.contentWindow);
         iframe.contentWindow.postMessage({
             message: "hello",
         }, "https://playcanv.as");

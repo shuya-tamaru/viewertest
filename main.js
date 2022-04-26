@@ -11,10 +11,8 @@ const changeIconRightToLeft = function(icon){
 const displayToggle = function(areaElement){
     if(areaElement.style.display == 'none'){
         areaElement.style.display = 'block';
-        console.log(1);
     }else{
         areaElement.style.display = 'none';
-        console.log(2);
     }
 };
 
