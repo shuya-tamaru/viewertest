@@ -141,14 +141,14 @@
 </body>
 <script type="text/javascript" src="main.js"></script>
 <script>
-window.setTimeout(
-    function(){
-    const iframe = document.getElementById("viewer");
-        console.log(iframe.contentWindow);
-        iframe.contentWindow.postMessage({
+    window.onload = function(){
+        let iframeDocument = document.getElementById("viewer");
+        console.log(iframeDocument.contentWindow.document);
+        iframeDocument.contentWindow.postMessage({
             message: "hello",
         }, "https://playcanv.as");
-}, 15000)
+    };
+
 
 
 
