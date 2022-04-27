@@ -145,9 +145,9 @@ window.addEventListener('DOMContentLoaded', function() {
     document.getElementById('viewer').onload = () => {
         console.log("hi");
         var iframeDocument = document.getElementById("viewer");
-        console.log(iframeDocument.contentWindow.document.getElementById("iframe").contentWindow);
-        var iframeDocument2 = iframeDocument.contentWindow.document.getElementById("iframe").contentWindow
-        iframeDocument2.contentWindow.postMessage({
+        console.log(iframeDocument.contentWindow.document);
+        // var iframeDocument2 = iframeDocument.contentWindow.document
+        iframeDocument.contentWindow.postMessage({
             message: "hello",
         }, "https://playcanv.as/p/348f9969/");
     };
