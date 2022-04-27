@@ -146,7 +146,7 @@ let iframeDocument = document.getElementById("viewer");
 console.log(iframeDocument.contentWindow);
 iframeDocument.contentWindow.postMessage({
     message: "hello",
-}, "https://playcanv.as");
+}, "*");
 
 
 
