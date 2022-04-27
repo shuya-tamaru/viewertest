@@ -141,12 +141,17 @@
 </body>
 <script type="text/javascript" src="main.js"></script>
 <script>
-
-let iframeDocument = document.getElementById("viewer");
-console.log(iframeDocument.contentWindow);
-iframeDocument.contentWindow.postMessage({
-    message: "hello",
+window.addEventListener('DOMContentLoaded', function() {
+    console.log("hi");
+    let iframeDocument = document.getElementById("viewer");
+    console.log(iframeDocument.contentWindow);
+    iframeDocument.contentWindow.postMessage({
+        message: "hello",
 }, "https://playcanv.as");
+
+
+})
+
 
 //受信側↓
 // window.addEventListener("message", function (event) {
