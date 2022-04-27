@@ -151,15 +151,12 @@
 window.addEventListener("message", function (event) {
     console.log(event);
     console.log(event.origin);
-    var message = event.data.message;
-    alert(message);
-    // if (event.origin == "https://shuya-tamaru.github.io") { // メッセージが自身のウェブサイトから来ていることを必ず確認してください
-    //     console.log(2);
-    //     var message = event.data.message;
-    //     alert(message);
-    // }else{
-    //     console.log(3);
-    // }
+    if (event.origin == "https://playcanv.as") { // メッセージが自身のウェブサイトから来ていることを必ず確認してください
+        var message = event.data.message;
+        alert(message);
+    }else{
+        console.log(3);
+    }
 }, false);
 
 
