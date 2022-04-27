@@ -143,10 +143,10 @@
 <script>
 
 let iframeDocument = document.getElementById("viewer");
-console.log(iframeDocument.contentWindow.window);
-iframeDocument.contentWindow.window.postMessage({
+console.log(iframeDocument.contentWindow);
+iframeDocument.contentWindow.postMessage({
     message: "hello",
-}, "https://shuya-tamaru.github.io");
+}, "https://playcanv.as");
 
 //受信側↓
 // window.addEventListener("message", function (event) {
