@@ -144,7 +144,7 @@
 window.addEventListener('DOMContentLoaded', function() {
     document.getElementById('viewer').onload = () => {
         console.log("hi");
-        let iframeDocument = document.getElementById("viewer");
+        var iframeDocument = document.getElementById("viewer");
         console.log(iframeDocument.contentWindow);
         iframeDocument.contentWindow.postMessage({
             message: "hello",
