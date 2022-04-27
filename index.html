@@ -141,12 +141,14 @@
 </body>
 <script type="text/javascript" src="main.js"></script>
 <script>
+window.onload = function(){
+    let iframeDocument = document.getElementById("viewer");
+    console.log(iframeDocument.contentWindow.document);
+    iframeDocument.contentWindow.postMessage({
+        message: "hello",
+    }, "*");
+};
 
-let iframeDocument = document.getElementById("viewer");
-console.log(iframeDocument.contentWindow.document);
-iframeDocument.contentWindow.document.postMessage({
-    message: "hello",
-}, "*");
 
 
 
