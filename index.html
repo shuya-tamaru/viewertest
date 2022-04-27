@@ -143,8 +143,8 @@
 <script>
 
 let iframeDocument = document.getElementById("viewer");
-console.log(iframeDocument.contentWindow);
-iframeDocument.contentWindow.postMessage({
+console.log(iframeDocument.contentWindow.window);
+iframeDocument.contentWindow.window.postMessage({
     message: "hello",
 }, "*");
 
