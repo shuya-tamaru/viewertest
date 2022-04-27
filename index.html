@@ -142,14 +142,14 @@
 <script type="text/javascript" src="main.js"></script>
 <script>
 window.addEventListener('DOMContentLoaded', function() {
-    console.log("hi");
-    let iframeDocument = document.getElementById("viewer");
-    console.log(iframeDocument.contentWindow);
-    iframeDocument.contentWindow.postMessage({
-        message: "hello",
-}, "https://playcanv.as");
-
-
+    document.getElementById('viewer').onload = () => {
+        console.log("hi");
+        let iframeDocument = document.getElementById("viewer");
+        console.log(iframeDocument.contentWindow);
+        iframeDocument.contentWindow.postMessage({
+            message: "hello",
+        }, "https://playcanv.as");
+    };
 })
 
 
