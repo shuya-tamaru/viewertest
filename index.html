@@ -145,11 +145,10 @@ window.addEventListener('DOMContentLoaded', function() {
     document.getElementById('viewer').onload = () => {
         console.log("hi");
         var iframeDocument = document.getElementById("viewer");
-        console.log(iframeDocument.contentWindow.document);
-        // var iframeDocument2 = iframeDocument.contentWindow.document
+        console.log(iframeDocument);
         iframeDocument.contentWindow.postMessage({
             message: "hello",
-        }, "https://playcanv.as/p/348f9969/");
+        }, "http://localhost:8000/");
     };
 })
 
